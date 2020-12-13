@@ -65,7 +65,7 @@ func (s *stmt) start(args []driver.Value) error {
 			}
 			continue
 		case int64:
-			if rv := C.duckdb_bind_int64(*s.stmt, C.ulong(i+1), C.longlong(v)); rv == C.DuckDBError {
+			if rv := C.duckdb_bind_int64(*s.stmt, C.ulong(i+1), C.long(v)); rv == C.DuckDBError {
 				return errCouldNotBind
 			}
 			continue
