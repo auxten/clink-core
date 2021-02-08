@@ -1,11 +1,18 @@
 // Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
 
-// Package duckdb implements a databse/sql driver for the DuckDB database.
-package duckdb
+// Package clinkcore implements a databse/sql driver for the clink-core database.
+package clinkcore
 
 /*
-#cgo LDFLAGS: -lduckdb
+#cgo CFLAGS: -I/home/auxten/Codes/go/src/github.com/cwida/duckdb/src/include
+#cgo LDFLAGS: -static /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/src/libduckdb_static.a
+#cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/utf8proc/libutf8proc.a
+#cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/fmt/libfmt.a
+#cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/re2/libduckdb_re2.a
+#cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/miniz/libminiz.a
+#cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/libpg_query/libpg_query.a
+#cgo LDFLAGS: -lm -lstdc++ -lgcc
 #include <duckdb.h>
 */
 import "C"
@@ -18,7 +25,7 @@ import (
 )
 
 func init() {
-	sql.Register("duckdb", impl{})
+	sql.Register("clink", impl{})
 }
 
 type impl struct{}

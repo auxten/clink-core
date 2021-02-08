@@ -1,4 +1,4 @@
-package duckdb
+package clinkcore
 
 type result struct {
 	ra int64

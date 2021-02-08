@@ -1,4 +1,4 @@
-package duckdb
+package clinkcore
 
 import (
 	"database/sql"

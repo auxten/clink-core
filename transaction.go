@@ -1,4 +1,4 @@
-package duckdb
+package clinkcore
 
 type tx struct {
 	c *conn

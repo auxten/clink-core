@@ -8,7 +8,7 @@ import (
 	"log"
 	"time"
 
-	_ "github.com/marcboeker/go-duckdb"
+	_ "github.com/auxten/clink-core"
 )
 
 var (
@@ -25,10 +25,10 @@ type user struct {
 
 func main() {
 	// Use second argument to store DB on disk
-	// db, err := sql.Open("duckdb", "foobar.db")
+	// db, err := sql.Open("clink", "foobar.db")
 
 	var err error
-	db, err = sql.Open("duckdb", "")
+	db, err = sql.Open("clink", "")
 	if err != nil {
 		log.Fatal(err)
 	}

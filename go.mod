@@ -1,3 +1,3 @@
-module github.com/marcboeker/go-duckdb
+module github.com/auxten/clink-core
 
-go 1.12
+go 1.15

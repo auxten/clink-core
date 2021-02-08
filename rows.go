@@ -1,4 +1,4 @@
-package duckdb
+package clinkcore
 
 /*
 #include <duckdb.h>
