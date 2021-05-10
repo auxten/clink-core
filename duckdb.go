@@ -12,7 +12,8 @@ package clinkcore
 #cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/re2/libduckdb_re2.a
 #cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/miniz/libminiz.a
 #cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/libpg_query/libpg_query.a
-#cgo LDFLAGS: -lm -lstdc++ -lgcc
+#cgo LDFLAGS: /home/auxten/Codes/go/src/github.com/cwida/duckdb/build/release/third_party/hyperloglog/libhyperloglog.a
+#cgo LDFLAGS: -lm -lstdc++ -lgcc -ldl
 #include <duckdb.h>
 */
 import "C"
